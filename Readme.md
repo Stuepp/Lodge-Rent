@@ -2,6 +2,10 @@
 
 Este projeto usa Docker para rodar o **backend** e o **frontend** em containers separados. O backend é uma API em FastAPI, e o frontend é uma aplicação Next.js.
 
+
+Ps: Após "dockerizar/conteinizar" o projeto o NextJS não conseguiu mais receber as imangens, no inicio conseguiu, porém parou de conseguir, fora isso o projeto está completo.
+Devido ao tempo também vários elementos no NextJS que poderiam ter sido "componentizados" também não foram, e o backend ficou um tanto bagunçado pois inicialmente tentei guardar as imagens direto no BD...
+
 ### Estrutura do projeto
 
 ```bash
@@ -70,6 +74,8 @@ project/
   ```bash
   docker-compose up --build
   ```
+  ! Pode acontecer de o backend-api não inicializar corretamente ou fechar/parar, basta ir no dockerhub e inicializar ele de novo, ou parar os docker e repetir o comondo.
+
   3. Após a construção, os containers serão iniciados e você poderá acessar o frontend no navegador em:
   http://localhost:3000/
 
