@@ -1,0 +1,48 @@
+services:
+  # Backend Service (FastAPI)
+  backend:
+    build:
+      context: ./backend
+    container_name: backend-api
+    depends_on:
+      - db
+    ports:
+      - "8000:80"   # Expondo a porta 8000 do backend para a porta 8000 no host
+    volumes:
+      - ./backend:/app
+    environment:
+      DATABASE_URL: postgresql://user:password@db:5432/postgresdb
+    networks:
+      - app-network
+  # DataBase service
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgresdb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - '5432:5432'
+    networks:
+      - app-network
+  # Frontend Service (Next.js)
+  rest-in:
+    build:
+      context: ./rest-in
+    container_name: nextjs-app
+    ports:
+      - "3000:3000"   # Expondo a porta 3000 do frontend para a porta 3000 no host
+    networks:
+      - app-network
+    depends_on:
+      - backend   # O frontend depende do backend para funcionar corretamente
+
+# Definindo a rede comum entre os containers
+networks:
+  app-network:
+    driver: bridge
+# Definindo volumes para o banco de dados
+volumes:
+  postgres_data:
