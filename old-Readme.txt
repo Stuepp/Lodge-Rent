@@ -26,6 +26,43 @@ project/
 ```
 ## Como rodar o projeto
 
+### Passos para rodar o backend
+
+  1. Navegue até o diretório backend:
+    
+    cd backend
+
+  2. Execute o comando para construir as imagens:
+
+    docker-compose build
+
+  3. Após a construção da imagem, inicie o container:
+
+    docker-compose up
+
+  4. O backend estará acessível em http://localhost:8000/.
+  5. Para usar post get e get{id} pode usar http://localhost:8000/docs
+
+### Passos para rodar o frontend (rest-in)
+
+  1. Navegue até o diretório rest-in:
+
+  ```bash
+  cd ../rest-in
+  ```
+  2. Execute o comando para construir as imagens:
+
+  ```bash
+  docker-compose build
+  ```
+  3. Após a construção da imagem, inicie o container:
+
+  ```bash
+  docker-compose up
+  ````
+  4. O frontend estará acessível em http://localhost:3000/.
+
+
 ### Passos para rodar ambos os serviços ao mesmo tempo
   1. Para iniciar tanto o backend quanto o frontend simultaneamente, vá para o diretório raiz do projeto, onde está o docker-compose.yml principal:
 
