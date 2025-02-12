@@ -7,7 +7,7 @@ Ps: Após "dockerizar/conteinizar" o projeto o NextJS não conseguiu mais recebe
 Devido ao tempo também vários elementos no NextJS que poderiam ter sido "componentizados" também não foram, e o backend ficou um tanto bagunçado pois inicialmente tentei guardar as imagens direto no BD...
 
 Ps2: Ao testar meu código funcionou tudo lindo sem precisar dar reload ou clicar duas vezes no botão, mas fui apresentar para uns amigos e tive que dar reload e apertar duas vezes nos botões...
-O reload em específico foi para os favoritos, quando clica na estrela para favoritar um(a) Lodge / Hospedagem, e o clique duas vezes, foi nos botões do dropwdown menu, mas pode ser que os outros também sejam ncessesários apertar 2x ... :(
+O reload em específico foi para os favoritos, quando clica na estrela para favoritar um(a) Lodge / Hospedagem, e o clique duas vezes, foi nos botões do dropwdown menu, mas pode ser que os outros também seja necessário  apertar 2x ... :(
 
 ### Estrutura do projeto
 
